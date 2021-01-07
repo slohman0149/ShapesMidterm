@@ -20,13 +20,13 @@ public class Triangle
     /**
      * Create a new triangle at default position with default color.
      */
-    public Triangle()
+    public Triangle(int initHeight, int base, int posX, int posY, int xVal, int yVal, int zVal)
     {
-        height = 60;
-        width = 70;
-        xPosition = 210;
-        yPosition = 140;
-        color = Canvas.getColor("green");
+        height = initHeight;
+        width = base;
+        xPosition = posX;
+        yPosition = posY;
+        color = new Color(xVal, yVal, zVal);
         isVisible = false;
     }
     

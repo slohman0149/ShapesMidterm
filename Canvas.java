@@ -449,4 +449,49 @@ public class Canvas {
             redraw();
         }
     }
+    
+    public static void Buildings() {
+        Rect build1 = new Rect(100, 300, 50, 250, 16, 16, 16);
+        build1.makeVisible();
+        Rect build2 = new Rect(150, 200, 150, 350, 16, 16, 16);
+        build2.makeVisible();
+        Rect build3 = new Rect(125, 400, 300, 150, 16, 16, 16);
+        build3.makeVisible();
+        Rect build4 = new Rect(100, 350, 425, 200, 16, 16, 16);
+        build4.makeVisible();
+        Rect build5 = new Rect(110, 250, 525, 300, 16, 16, 16);
+        build5.makeVisible();
+        Rect build6 = new Rect(135, 275, 635, 275, 16, 16, 16);
+        build6.makeVisible();
+        Rect build7 = new Rect(50, 325, 0, 225, 16, 16, 16);
+        build7.makeVisible();
+        Rect build8 = new Rect(100, 375, 770, 175, 16, 16, 16);
+        build8.makeVisible();
+    }
+    
+    public static void Roofs() {
+        Triangle roof1 = new Triangle(50, 150, 225, 300, 16, 16, 16);
+        roof1.makeVisible();
+        Triangle roof2 = new Triangle(75, 100, 475, 125, 16, 16, 16);
+        roof2.makeVisible();
+        Triangle roof3 = new Triangle(100, 110, 580, 200, 16, 16, 16);
+        roof3.makeVisible();
+    }
+    
+    public static void Stars() {
+        for(int s = 0; s < 500; s++) {
+            int randomDiameter = (int) (Math.random()* 11);
+            int randomX = (int) (Math.random() * 800);
+            int randomY = (int) (Math.random() * 500);
+            Circle star = new Circle(randomDiameter, randomX, randomY, 255, 255, 165);
+            star.makeVisible();
+        }
+        for(int s = 0; s < 500; s++) {
+            int randomDiameter = (int) (Math.random()* 11);
+            int randomX = (int) (Math.random() * 800);
+            int randomY = (int) (Math.random() * 500);
+            Circle star = new Circle(randomDiameter, randomX, randomY, 255, 255, 255);
+            star.makeVisible();
+        }
+    }
 }

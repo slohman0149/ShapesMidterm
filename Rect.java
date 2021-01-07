@@ -20,13 +20,13 @@ public class Rect
     /**
      * Create a new rectangle at default position with default color.
      */
-    public Rect()
+    public Rect(int sizeX, int sizeY, int posX, int posY, int xVal, int yVal, int zVal)
     {
-        xSize = 60;
-        ySize = 60;
-        xPosition = 310;
-        yPosition = 120;
-        color = Canvas.getColor("red");
+        xSize = sizeX;
+        ySize = sizeY;
+        xPosition = posX;
+        yPosition = posY;
+        color = new Color(xVal, yVal, zVal);
         isVisible = false;
     }
 
