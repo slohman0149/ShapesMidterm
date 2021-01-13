@@ -479,19 +479,23 @@ public class Canvas {
     }
     
     public static void Stars() {
-        for(int s = 0; s < 500; s++) {
-            int randomDiameter = (int) (Math.random()* 11);
-            int randomX = (int) (Math.random() * 800);
-            int randomY = (int) (Math.random() * 500);
-            Circle star = new Circle(randomDiameter, randomX, randomY, 255, 255, 165);
-            star.makeVisible();
+        for(int s = 0; s < 1000; s++) {
+            int evenOdd = (int) (Math.random() * 11);
+            if (evenOdd % 2 == 0) {
+                int randomDiameter = (int) (Math.random()* 11);
+                int randomX = (int) (Math.random() * 800);
+                int randomY = (int) (Math.random() * 500);
+                Circle star = new Circle(randomDiameter, randomX, randomY, 255, 255, 165);
+                star.makeVisible();
+            }
+            else if (evenOdd % 2 != 0) {
+                int randomDiameter = (int) (Math.random()* 11);
+                int randomX = (int) (Math.random() * 800);
+                int randomY = (int) (Math.random() * 500);
+                Circle star = new Circle(randomDiameter, randomX, randomY, 255, 255, 255);
+                star.makeVisible();
+            }
         }
-        for(int s = 0; s < 500; s++) {
-            int randomDiameter = (int) (Math.random()* 11);
-            int randomX = (int) (Math.random() * 800);
-            int randomY = (int) (Math.random() * 500);
-            Circle star = new Circle(randomDiameter, randomX, randomY, 255, 255, 255);
-            star.makeVisible();
-        }
+
     }
 }
